@@ -1,0 +1,14 @@
+/* Font imports */
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+/* general */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Mulish", sans-serif;
+}
+.hidden {
+  display: none !important;
+}
+/* Import Form style */
+@import "./form/form.scss";

@@ -1,0 +1,158 @@
+/* Form style */
+.form-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  .form {
+    width: 369px;
+    height: 474px;
+    padding: 30px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 15px;
+    .input-fields {
+      width: 90%;
+      display: flex;
+      flex-flow: column nowrap;
+      padding: 0 10px;
+    }
+  }
+}
+/* Progress bar style */
+.progress-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  .progress-check {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .progress-title {
+      font-weight: 800;
+      font-size: 12px;
+      line-height: 12px;
+      margin-top: 10px;
+      color: #9b9fa1;
+    }
+    .progress-line {
+      position: absolute;
+      top: 3px;
+      z-index: -1;
+      height: 3px;
+      border: none;
+      background-color: #9b9fa1;
+    }
+    &.completed {
+      .progress-title {
+        color: #000;
+      }
+      .progress-line {
+        background-color: #31cb68;
+      }
+    }
+    .phase-1 {
+      width: 165px;
+      left: -130px;
+    }
+    .phase-2 {
+      width: 140px;
+      left: -121px;
+    }
+  }
+  .completed svg #primary {
+    fill: #31cb68;
+  }
+  svg {
+    #primary {
+      fill: #9b9fa1;
+    }
+    #secondary {
+      fill: #fff;
+    }
+  }
+}
+/* Input fields style */
+.input-field-wrapper {
+  margin: 19px 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  .input-field {
+    border: 1px solid #697072;
+    border-radius: 15px;
+    padding: 24px 34px;
+    width: 100%;
+    font-size: 16px;
+    &::placeholder {
+      font-family: "Lato", sans-serif;
+    }
+    &:focus {
+      border: 1px solid #33d9ff;
+      outline: none;
+    }
+  }
+  .input-label {
+    position: absolute;
+    left: 28px;
+    top: -8px;
+    color: #000;
+    font-size: 12px;
+    background-color: #fff;
+    font-weight: 700;
+    padding-left: 7px;
+    padding-right: 18px;
+    text-align: center;
+    .required {
+      color: rgb(255, 0, 0);
+      margin-left: 4px;
+    }
+  }
+  .clear-input {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 24px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+.btn {
+  background: #34daff;
+  border-radius: 15px;
+  padding: 12px 18px;
+  margin-top: 15px;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(6, 16, 20, 0.9);
+  border: none;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-next {
+  align-self: end;
+}
+.error-message {
+  color: rgb(255, 0, 0);
+  font-weight: 700;
+  margin-top: 5px;
+  font-size: 10px;
+}

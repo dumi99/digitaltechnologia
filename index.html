@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Digital Technologia - Assignment</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Assignment for employment" />
+  <meta name="keywords" content="HTML, CSS, JavaScript" />
+  <meta name="author" content="George Dumitrache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./assets/styles/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="form-wrapper">
+    <div class="form">
+      <div id="progress" class="progress-bar">
+        <div class="progress-check completed">
+          <svg
+            fill="#000000"
+            width="28px"
+            height="28px"
+            viewBox="0 0 24 24"
+            id="check-mark-circle"
+            data-name="Flat Color"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon flat-color"
+          >
+            <circle id="primary" cx="12" cy="12" r="10"></circle>
+            <path
+              id="secondary"
+              d="M11,15.5a1,1,0,0,1-.71-.29l-3-3a1,1,0,1,1,1.42-1.42L11,13.09l4.29-4.3a1,1,0,0,1,1.42,1.42l-5,5A1,1,0,0,1,11,15.5Z"
+            ></path>
+          </svg>
+          <span class="progress-title">PERSONAL INFO</span>
+        </div>
+        <div class="progress-check">
+          <svg
+            fill="#000000"
+            width="28px"
+            height="28px"
+            viewBox="0 0 24 24"
+            id="check-mark-circle"
+            data-name="Flat Color"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon flat-color"
+          >
+            <circle id="primary" cx="12" cy="12" r="10"></circle>
+            <path
+              id="secondary"
+              d="M11,15.5a1,1,0,0,1-.71-.29l-3-3a1,1,0,1,1,1.42-1.42L11,13.09l4.29-4.3a1,1,0,0,1,1.42,1.42l-5,5A1,1,0,0,1,11,15.5Z"
+            ></path>
+          </svg>
+          <hr class="progress-line phase-1" />
+          <span class="progress-title">DATE & TIME</span>
+        </div>
+        <div class="progress-check">
+          <svg
+            fill="#000000"
+            width="28px"
+            height="28px"
+            viewBox="0 0 24 24"
+            id="check-mark-circle"
+            data-name="Flat Color"
+            xmlns="http://www.w3.org/2000/svg"
+            class="icon flat-color"
+          >
+            <circle id="primary" cx="12" cy="12" r="10"></circle>
+            <path
+              id="secondary"
+              d="M11,15.5a1,1,0,0,1-.71-.29l-3-3a1,1,0,1,1,1.42-1.42L11,13.09l4.29-4.3a1,1,0,0,1,1.42,1.42l-5,5A1,1,0,0,1,11,15.5Z"
+            ></path>
+          </svg>
+          <hr class="progress-line phase-2" />
+          <span class="progress-title">DONE</span>
+        </div>
+      </div>
+      <div id="personal-info" class="input-fields">
+        <div class="input-field-wrapper">
+          <input
+            type="text"
+            id="input-name"
+            class="input-field"
+            value=""
+            placeholder="Your Name"
+            onclick="clickInput(id)"
+            required
+          />
+          <label for="input-name" class="input-label">
+            Name<span class="required">*</span>
+          </label>
+          <button
+            id="clear-input-name"
+            class="clear-input hidden"
+            onClick="clearInput(id)"
+          >
+            <img src="./assets/images/close.svg" alt="close-icon" />
+          </button>
+        </div>
+        <div class="input-field-wrapper">
+          <input
+            type="tel"
+            id="input-number"
+            class="input-field"
+            value=""
+            placeholder="Mobile Number"
+            pattern="[+]{1}[0-9]{11,14}"
+            onclick="clickInput(id)"
+            onkeydown="validateNumber(event)"
+            required
+          />
+          <label for="input-number" class="input-label">
+            Phone Number<span class="required">*</span>
+          </label>
+          <button
+            id="clear-input-number"
+            class="clear-input hidden"
+            onClick="clearInput(id)"
+          >
+            <img src="./assets/images/close.svg" alt="close-icon" />
+          </button>
+        </div>
+        <div class="input-field-wrapper">
+          <input
+            type="email"
+            id="input-email"
+            class="input-field"
+            value=""
+            placeholder="Email address"
+            onclick="clickInput(id)"
+            required
+          />
+          <label for="input-email" class="input-label">
+            Email<span class="required">*</span></label
+          >
+          <button
+            id="clear-input-email"
+            class="clear-input hidden"
+            onClick="clearInput(id)"
+          >
+            <img src="./assets/images/close.svg" alt="close-icon" />
+          </button>
+        </div>
+        <button class="btn btn-next" onclick="completePersonalInfo()">
+          Next
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 256 512"
+            class="relative top-[0.1rem] h-7 w-7"
+            height="1em"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <span class="error-message hidden"
+        >Some fields are invalid, please check again!</span
+      >
+    </div>
+  </div>
+  <script src="./assets/scripts/main-dist.js"></script>
+</body>
