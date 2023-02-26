@@ -1,3 +1,15 @@
+/* Form variables */
+$form-width: 369px;
+$form-height: 474px;
+$border-radius-main: 15px;
+$font-size-xs: 10px;
+$font-size-small: 12px;
+$font-size-medium: 16px;
+$input-distance: 24px;
+$main-theme-color: #34daff;
+$error-color: rgb(255, 0, 0);
+$success-color: #31cb68;
+
 /* Form style */
 .form-wrapper {
   display: flex;
@@ -7,15 +19,15 @@
   width: 100vw;
   height: 100vh;
   .form {
-    width: 369px;
-    height: 474px;
+    width: $form-width;
+    height: $form-height;
     padding: 30px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.06);
-    border-radius: 15px;
+    border-radius: $border-radius-main;
     .input-fields {
       width: 90%;
       display: flex;
@@ -39,7 +51,7 @@
     position: relative;
     .progress-title {
       font-weight: 800;
-      font-size: 12px;
+      font-size: $font-size-small;
       line-height: 12px;
       margin-top: 10px;
       color: #9b9fa1;
@@ -57,7 +69,7 @@
         color: #000;
       }
       .progress-line {
-        background-color: #31cb68;
+        background-color: $success-color;
       }
     }
     .phase-1 {
@@ -70,7 +82,7 @@
     }
   }
   .completed svg #primary {
-    fill: #31cb68;
+    fill: $success-color;
   }
   svg {
     #primary {
@@ -89,15 +101,15 @@
   display: flex;
   .input-field {
     border: 1px solid #697072;
-    border-radius: 15px;
-    padding: 24px 34px;
+    border-radius: $border-radius-main;
+    padding: $input-distance 34px;
     width: 100%;
-    font-size: 16px;
+    font-size: $font-size-medium;
     &::placeholder {
       font-family: "Lato", sans-serif;
     }
     &:focus {
-      border: 1px solid #33d9ff;
+      border: 1px solid $main-theme-color;
       outline: none;
     }
   }
@@ -106,14 +118,14 @@
     left: 28px;
     top: -8px;
     color: #000;
-    font-size: 12px;
+    font-size: $font-size-small;
     background-color: #fff;
     font-weight: 700;
     padding-left: 7px;
     padding-right: 18px;
     text-align: center;
     .required {
-      color: rgb(255, 0, 0);
+      color: $error-color;
       margin-left: 4px;
     }
   }
@@ -122,20 +134,20 @@
     border: none;
     position: absolute;
     right: 10px;
-    top: 24px;
+    top: $input-distance;
     &:hover {
       cursor: pointer;
     }
   }
 }
 .btn {
-  background: #34daff;
-  border-radius: 15px;
+  background: $main-theme-color;
+  border-radius: $border-radius-main;
   padding: 12px 18px;
   margin-top: 15px;
   gap: 8px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: $font-size-medium;
   line-height: 24px;
   color: rgba(6, 16, 20, 0.9);
   border: none;
@@ -151,8 +163,8 @@
   align-self: end;
 }
 .error-message {
-  color: rgb(255, 0, 0);
+  color: $error-color;
   font-weight: 700;
   margin-top: 5px;
-  font-size: 10px;
+  font-size: $font-size-xs;
 }
