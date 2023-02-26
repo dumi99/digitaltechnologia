@@ -1,2 +1,2 @@
-# digitaltechnologia
-Assignment for employment
+## Project: Simple form
+## Stacks: SCSS, JS, HTML
